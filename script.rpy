@@ -4,12 +4,12 @@
 
 define mo = Character("独白")
 
-
-# 游戏在此开始。
-
+# 游戏在此开始。:
 label start:
     stop music # 结束主菜单背景音乐的播放
-    play sound "audio/alarm_clock.mp3"
+    scene sky
+    show text "Hello, World" at truecenter
+
     menu:
         "关闭闹钟":
             mo "“已经早上了么...”。"
