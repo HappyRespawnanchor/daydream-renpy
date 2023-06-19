@@ -12,7 +12,8 @@ screen turn_off_clock_button():
         yalign 0.8
         background "#d05d74"
         textbutton "关闭闹钟": 
-            selected_hover_background "#ae4a51"
+            # 咱就是说，这个鼠标按下按钮但没松开变色的selected_hover_background怎么没生效，等会研究下
+            selected_hover_background "#ae4a51" 
             text_color "#fefefe"
             text_hover_color "#fefefe"
             hover_background "#ca7086"
@@ -24,11 +25,11 @@ label start:
     play music "/bgm/BGM1.mp3"
     play sound "/sound/闹钟.mp3"
     show screen turn_off_clock_button
+
     python:
         _skipping = False
-        
         renpy.pause(hard=True) # 屏蔽用户点击操作，等待玩家按下“关闭闹钟”按钮
-        
+
     scene 背景2
     mo "“已经早上了么...”。"
     mo "刺耳的闹铃声音一如既往的在这个时间段传进了我的耳朵里。"
