@@ -23,7 +23,7 @@ init python:
 ## 界面中文本的颜色。
 
 ## 整个界面中使用的强调色，用于标记和突出显示文本。
-define gui.accent_color = '#cc0066'
+define gui.accent_color = '#ff878e'
 
 ## 当文本按钮既未被选中也未被悬停时使用的颜色。
 define gui.idle_color = '#aaaaaa'
@@ -32,7 +32,7 @@ define gui.idle_color = '#aaaaaa'
 define gui.idle_small_color = '#888888'
 
 ## 当按钮和滑条被悬停时使用的颜色。
-define gui.hover_color = '#cc0066'
+define gui.hover_color = '#ff878e'
 
 ## 当文本按钮被选中但非焦点时使用的颜色。当一个按钮为当前屏幕或设置选项值时，会
 ## 处于选中状态。
@@ -43,8 +43,8 @@ define gui.insensitive_color = '#aaaaaa7f'
 
 ## 滑条未填充的部分使用的颜色。这些颜色不直接使用，但在重新生成条形图像文件时使
 ## 用。
-define gui.muted_color = '#e066a3'
-define gui.hover_muted_color = '#ea99c1'
+define gui.muted_color = '#ffadae'
+define gui.hover_muted_color = '#ffd9da'
 
 ## 对话和菜单选择文本使用的颜色。
 define gui.text_color = '#404040'

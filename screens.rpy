@@ -240,7 +240,8 @@ screen quick_menu():
             style_prefix "quick"
 
             xalign 0.5
-            yalign 1.0
+            # 轻微上移快捷菜单以使其与对话框图片吻合
+            yalign 0.99
 
             textbutton _("回退") action Rollback()
             textbutton _("历史") action ShowMenu('history')
