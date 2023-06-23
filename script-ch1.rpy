@@ -18,11 +18,14 @@ screen turn_off_clock_button(text):
             hover_background "#ca7086"
             action Return(True)
 
+label before_main_menu:
+    show screen  main_menu with dissolve
+    with Pause(1)
+    return False
 # 游戏在此开始。:
 label start:
     stop music # 结束主菜单背景音乐的播放
     $ renpy.movie_cutscene("/video/加载中.webm")
-    
     play music "/bgm/BGM1.mp3"
     play sound "/sound/闹钟.mp3"
     $ quick_menu = False
@@ -111,6 +114,16 @@ label start:
                 yuta "这样么...我明白了，放心吧薰，我今天放学一定会早点回来陪你的。"
                 show kaoru 薰正常
                 kaoru "真的吗？哥哥...应该不会骗我吧？"
+                yuta "当然不会啦，我可是说过了要好好在你身边陪着你的啊~"
+                show kaoru 薰眯眼笑
+                kaoru "那就约好了，一定要快点回来哦，哥哥。"
+                yuta  "嗯嗯，一定会的！"
+                hide kaoru 薰眯眼笑
+                $ quick_menu = False
+                call screen turn_off_clock_button("去学校")  
+                $ quick_menu = True
+                scene 街道
+                call ch2
         "给薰穿上泳装":
             show kaoru 薰泳装正常
             with dissolve

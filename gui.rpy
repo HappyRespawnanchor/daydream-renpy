@@ -83,10 +83,9 @@ define gui.title_text_size = 75
 
 ## 标题和游戏菜单 #####################################################################
 
-## 标题菜单和游戏菜单使用的图像。
+## 标题菜单游戏菜单使用的图像。
 define gui.main_menu_background = "gui/main_menu.png"
 define gui.game_menu_background = "gui/game_menu.png"
-
 
 ## 对话 ##########################################################################
 ##
@@ -188,7 +187,6 @@ define gui.quick_button_text_selected_color = gui.accent_color
 ## 选项按钮 ########################################################################
 ##
 ## 游戏内菜单使用的选项按钮。
-
 define gui.choice_button_width = 1185
 define gui.choice_button_height = None
 define gui.choice_button_tile = False

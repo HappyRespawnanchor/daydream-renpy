@@ -107,7 +107,6 @@ screen say(who, what):
 
         text what id "what"
 
-
     ## 如果有对话框头像，会将其显示在文本之上。请不要在手机界面下显示这个，因为
     ## 没有空间。
     if not renpy.variant("small"):
