@@ -4,7 +4,9 @@ define mo = Character("独白", color="#f08899")
 # 为kaoru与yuta的Character加上全角引号前缀（what_prefix）与后缀（what_suffix），本来这个真的无力吐槽，看了ddlc的实现，快改了www
 define kaoru = Character("星野薫", color="#f08899", what_prefix='“', what_suffix='”')
 define yuta = Character("佐藤裕太", color="#f08899", what_prefix='“', what_suffix='”')
+
 $ quick_menu = True
+$ _skipping = True
 
 screen turn_off_clock_button(text):
     frame:
@@ -14,21 +16,19 @@ screen turn_off_clock_button(text):
         textbutton text: # 使用传递的参数作为按钮文字，后面继续用
             text_color "#fefefe"
             hover_background "#ca7086"
-            action Return()
-
+            action Return(True)
 
 # 游戏在此开始。:
 label start:
     stop music # 结束主菜单背景音乐的播放
+    $ renpy.movie_cutscene("/video/加载中.webm")
+    
     play music "/bgm/BGM1.mp3"
     play sound "/sound/闹钟.mp3"
-    show screen turn_off_clock_button("关闭闹钟")  
     $ quick_menu = False
-    $ _skipping = False
-    $ renpy.pause(hard=True) # 屏蔽用户点击操作，等待玩家按下“关闭闹钟”按钮
+    call screen turn_off_clock_button("关闭闹钟")  
     scene 背景2
     $ quick_menu = True
-    $ _skipping = True
     hide screen turn_off_clock_button
     mo "“已经早上了么...”。"
     mo "刺耳的闹铃声音一如既往的在这个时间段传进了我的耳朵里。"
@@ -90,15 +90,11 @@ label start:
                 yuta "等、等等...薰！！"
                 mo "果然...还是我太心急了么。"
                 mo "明明知道薰无法出门，结果...我还是自以为是的允许她与我一起上学......"
-                hide say-centered # 试图隐藏对话框然而没用
-                show screen turn_off_clock_button("送熏回家")  
                 $ quick_menu = False
-                $ _skipping = False
-                $ renpy.pause(hard=True)
+                call screen turn_off_clock_button("送熏回家")  
+                $ quick_menu = True
                 show 背景21
                 with fade
-                $ quick_menu = True
-                $ _skipping = True
                 mo "我抱着薰，焦急的冲回了家中，将薰安置在了她房间的床上。"
                 mo "看着薰脸上虚弱的表情，一时半会...我的心里很不是滋味。"
                 mo "其实，薰出现这样子的状况，已经不是一次两次了..."
