@@ -4,9 +4,14 @@ define mo = Character("独白", color="#f08899")
 # 为kaoru与yuta的Character加上全角引号前缀（what_prefix）与后缀（what_suffix），本来这个真的无力吐槽，看了ddlc的实现，快改了www
 define kaoru = Character("星野薫", color="#f08899", what_prefix='“', what_suffix='”')
 define yuta = Character("佐藤裕太", color="#f08899", what_prefix='“', what_suffix='”')
+define gril = Character("女孩", color="#f08899", what_prefix='“', what_suffix='”')
+define yui = Character("櫻井結衣", color="#f08899", what_prefix='“', what_suffix='”')
+
 
 $ quick_menu = True
 $ _skipping = True
+
+image bg black = "#000000"
 
 screen turn_off_clock_button(text):
     frame:
@@ -121,8 +126,8 @@ label start:
                 hide kaoru 薰眯眼笑
                 $ quick_menu = False
                 call screen turn_off_clock_button("去学校")  
-                $ quick_menu = True
-                scene 街道
+                scene bg black
+                with fade
                 call ch2
         "给薰穿上泳装":
             show kaoru 薰泳装正常
