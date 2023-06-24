@@ -6,7 +6,8 @@ define kaoru = Character("星野薫", color="#f08899", what_prefix='“', what_s
 define yuta = Character("佐藤裕太", color="#f08899", what_prefix='“', what_suffix='”')
 define gril = Character("女孩", color="#f08899", what_prefix='“', what_suffix='”')
 define yui = Character("櫻井結衣", color="#f08899", what_prefix='“', what_suffix='”')
-
+define chinat = Character("石原千夏", color="#f08899", what_prefix='“', what_suffix='”')
+define teach = Character("先生", color="#f08899", what_prefix='“', what_suffix='”')
 
 $ quick_menu = True
 $ _skipping = True

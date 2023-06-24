@@ -8,7 +8,7 @@ for file in *; do
   # 检查文件是否是普通文件
   if [[ -f "$file" ]]; then
     # 添加"kaoru "前缀并使用mv命令重命名文件
-    mv "$file" "yui $file"
-    echo "已重命名文件: yui $file"
+    mv "$file" "chinat $file"
+    echo "已重命名文件: chinat $file"
   fi
 done
